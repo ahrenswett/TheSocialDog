@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+
+/* Nav Bar */
+
+.topnav{
+    background-color: aqua;
+}
+
+.topnav ul{
+    display: flex;
+    justify-content:right;
+}
+
+.topnav ul li{
+   list-style: none; 
+}
+
+.topnav ul li a{
+    display: block;
+    padding: 1em;
+    color: rgb(0, 0, 0);
+    transition: .5s;
+}
+
+
+.topnav ul li a:hover{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+
+
+/* Add a black background color to the top navigation
+.topnav {
+    background-color: darkslategray;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+  }
+  
+  /* Style the links inside the navigation bar */
+/* .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+} */
+  
+  /* Change the color of links on hover */
+/* .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+} */
+  
+  /* Add a color to the active/current link */
+/* .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+} */ */
+
+/* how to create a cutout text 
+https://www.w3schools.com/howto/howto_css_cutout_text.asp
+*/
+
+.image-container {
+    background-image: url('../img/matt-nelson-aI3EBLvcyu4-unsplash.jpg');/* The image used - important! */
+    background-position: center;
+    background-size: cover;
+    position:relative; /* Needed to position the cutout text in the middle of the image */
+    height: 100%; /* Some height */
+}
+
+.title {
+    border-radius: .1em;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    font-size: 7vw; /* Responsive font size */
+    font-weight: bold;
+    margin: 0 auto; /* Center the text container */
+    padding: 10px;
+    width: 50%;
+    text-align: center; /* Center text */
+    position:inherit; /* Position text */
+    top: 8%; /* Position text in the middle */
+    left: 50%; /* Position text in the middle */
+    transform: translate(-50%, -50%); /* Position text in the middle */
+    mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+ }
+
+
+
+.li{
+    display: inline;
+    font-weight: bold;
+    margin: 20px;
+    /* transform: translate(-50%, -50%); */
+    /* mix-blend-mode: screen; This makes the cutout text possible  */
+}
+
+
+.statement{
+    padding: 20px;
+    border-radius: 2em;
+    background-color: rgba(255, 255, 255, 0.701);
+    width:350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Open Sans', sans-serif;
+    justify-content: center;
+}
+
+
