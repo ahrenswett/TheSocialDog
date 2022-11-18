@@ -48,7 +48,7 @@ html,body{
     color: white;
 }
 
-
+/* Main */
 main{
     width: 100%;
     max-width: 900px;
@@ -56,6 +56,12 @@ main{
     margin: 0 auto;
 }
 
+/* Footer Nav*/
+
+footer{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+}
 
 
 /* Add a black background color to the top navigation
