@@ -2,20 +2,34 @@
 
 
 
+
 *{
     margin: 0;
     padding: 0;
+    
 }
 
+img{
+    width: 100%;
+}
 
 html,body{
     height: 100%;
     width: 100%;
+    /* set a minimum for the site for  */
+    min-width: 600px;
+}
+
+body main{
+margin: auto;
+}
+
+body main div{
+    margin: 10px;
 }
 
 
-/* Nav Bar */
-
+/************** Nav Bar **************/
 .topnav h1{
     padding: 1em;
 }
@@ -48,113 +62,73 @@ html,body{
     color: white;
 }
 
-/* Main */
+
+
+
+/************** Main Body **************/
 main{
     width: 100%;
     max-width: 900px;
     background-color: blueviolet;
-    margin: 0 auto;
+    display: grid;
+
+    /* had to search the docs
+    found the answer here : 
+    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#implicit_and_explicit_grids */
+    grid-template-columns: repeat(3, 1fr);
 }
 
-/* Footer Nav*/
+.hero{
+    grid-column-start: 1;
+    grid-column-end: 4; 
+}
 
+
+
+
+
+
+
+
+
+
+
+/************** Footer Nav **************/
 footer{
     display: grid;
+    place-items: center;
     grid-template-columns: auto 1fr auto;
+    background-color: aqua;
+    padding: 15px;
 }
 
 
-/* Add a black background color to the top navigation
-.topnav {
-    background-color: darkslategray;
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
-  }
-  
-  /* Style the links inside the navigation bar */
-/* .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-} */
-  
-  /* Change the color of links on hover */
-/* .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-} */
-  
-  /* Add a color to the active/current link */
-/* .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
-} */ */
-
-/* how to create a cutout text 
-https://www.w3schools.com/howto/howto_css_cutout_text.asp
-*/
-
-.image-container {
-    background-image: url('../img/matt-nelson-aI3EBLvcyu4-unsplash.jpg');/* The image used - important! */
-    background-position: center;
-    background-size: cover;
-    position:relative; /* Needed to position the cutout text in the middle of the image */
-    height: 100%; /* Some height */
-}
-
-.title {
-    border-radius: .1em;
-    background-color: rgb(255, 255, 255);
-    color: black;
-    font-size: 7vw; /* Responsive font size */
-    font-weight: bold;
-    margin: 0 auto; /* Center the text container */
-    padding: 10px;
-    width: 50%;
-    text-align: center; /* Center text */
-    position:inherit; /* Position text */
-    top: 8%; /* Position text in the middle */
-    left: 50%; /* Position text in the middle */
-    transform: translate(-50%, -50%); /* Position text in the middle */
-    mix-blend-mode: screen; /* This makes the cutout text possible */
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: darkslategray;
-    color: white;
-    text-align: center;
- }
-
-
-
-.li{
-    display: inline;
-    font-weight: bold;
-    margin: 20px;
-    /* transform: translate(-50%, -50%); */
-    /* mix-blend-mode: screen; This makes the cutout text possible  */
+footer #social ul {
+    display: flex;
+    justify-content: right;
+    align-content: center;
 }
 
 
-.statement{
-    padding: 20px;
-    border-radius: 2em;
-    background-color: rgba(255, 255, 255, 0.701);
-    width:350px;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Open Sans', sans-serif;
+footer ul li a{
+    display :flex ;
+    justify-self :center;
+}
+
+
+footer #social ul li {
+    list-style:none;
+}
+
+
+footer #social ul li a {
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    background-color: rgb(150, 19, 160);
 }
 
 
