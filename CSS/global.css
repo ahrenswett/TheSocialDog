@@ -2,7 +2,6 @@
 
 
 
-
 *{
     margin: 0;
     padding: 0;
@@ -22,6 +21,7 @@ html,body{
 
 body main{
 margin: auto;
+height: 100%;
 }
 
 body main div{
@@ -31,7 +31,11 @@ body main div{
 
 /************** Nav Bar **************/
 .topnav h1{
-    padding: 1em;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(150, 19, 160);
+    align-self: center;
 }
 
 .topnav{
@@ -43,6 +47,7 @@ body main div{
 .topnav ul{
     display: flex;
     justify-content:right;
+    align-self: center;
 }
 
 .topnav ul li{
@@ -64,42 +69,15 @@ body main div{
 
 
 
-
-/************** Main Body **************/
-main{
-    width: 100%;
-    max-width: 900px;
-    background-color: blueviolet;
-    display: grid;
-
-    /* had to search the docs
-    found the answer here : 
-    https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#implicit_and_explicit_grids */
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.hero{
-    grid-column-start: 1;
-    grid-column-end: 4; 
-}
-
-
-
-
-
-
-
-
-
-
-
 /************** Footer Nav **************/
 footer{
+    position: fixed;
+    width:100%;
+    bottom: 0;
     display: grid;
     place-items: center;
     grid-template-columns: auto 1fr auto;
     background-color: aqua;
-    padding: 15px;
 }
 
 
@@ -116,18 +94,20 @@ footer ul li a{
 }
 
 
-footer #social ul li {
+footer ul li {
     list-style:none;
+    padding: 5px;
 }
 
 
 footer #social ul li a {
+    margin: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 40px;
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
     background-color: rgb(150, 19, 160);
 }
 
